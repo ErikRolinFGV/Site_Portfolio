@@ -67,10 +67,10 @@ export function LogosBar() {
 // ──────── METRICS ────────
 export function Metrics() {
   const stats = [
-    { num: "61.449", label: "publicações analisadas", note: "PIBIC · Amazônia Legal" },
-    { num: "160",    label: "veículos mapeados",     note: "Instagram · 2024" },
+    { num: "78.497", label: "publicações analisadas", note: "PIBIC · Amazônia Legal" },
+    { num: "211",    label: "perfis mapeados",       note: "Instagram · 2024" },
     { num: "9",      label: "capitais cobertas",     note: "9 estados da Amazônia Legal" },
-    { num: "4",      label: "frentes de atuação",    note: "FSB · PIBIC · Quest · SAEB" },
+    { num: "13",     label: "macro-temas mapeados",  note: "de 120 clusters semânticos" },
   ];
   return (
     <section className="section section--tight section--metrics" id="numeros">
@@ -133,9 +133,14 @@ export function Timeline() {
       tagStyle: "accent",
     },
     {
-      year: "2026", tag: "agora",
-      title: "Clusterização do PIBIC · app FSB em curso",
-      body: "Aplicando BERTopic na base de 61.449 publicações. App de inteligência executiva em desenvolvimento. Aberto a estágio.",
+      year: "2026.1", tag: "marco",
+      title: "ECA Digital entra em vigor · metodologia do índice em construção",
+      body: "Com a Lei 15.211/2025 em vigor desde 17 de março, a FGV Quest assume a tradução da norma para o público e o JogoJusto ganha forma. Em paralelo, a coleta do PIBIC é executada pelo DAPP Lab e o produto da Nexus sai do protótipo.",
+    },
+    {
+      year: "2026.2", tag: "agora",
+      title: "PIBIC analisado · Deeper validado · JogoJusto em piloto",
+      body: "78.497 publicações clusterizadas em 120 clusters e 13 macro-temas, com o artigo em redação. O Deeper, ferramenta de inteligência sobre executivos, é aprovado em demonstração na FSB. O JogoJusto entra em piloto de confiabilidade entre avaliadores. Aberto a estágio.",
       tagStyle: "live",
     },
     {

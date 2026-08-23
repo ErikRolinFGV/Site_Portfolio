@@ -62,6 +62,12 @@ public/
 - Tudo modularizado em imports/exports ES — sem globais `window.X` nem Babel inline.
 
 ## Pendências de conteúdo (atualizar quando tiver)
+- Screenshot do grafo de conexões do Deeper (substituir `public/assets/covers/fsb-code.png`)
+- Imagem `public/assets/covers/pibic-clusters.png`: conferir se a legenda queimada na figura ainda diz "UMAP" (a legenda no site já foi corrigida para MDS clássico)
+- Explorador interativo do PIBIC (~11 MB): decidir hospedagem antes de linkar em `lib/projectData.ts`
+- Relatório parcial do PIBIC e artigo final
+- Portal de transparência do JogoJusto
 - Citação de orientador/parceiro (prova social externa)
-- Relatório parcial do PIBIC, portal de transparência do ISJ
-- Documentação/repos que ainda estão como "em breve" em `lib/projectData.ts`
+
+## Histórico
+- **ago/2026** — atualização de conteúdo: FSB/Nexus passa a se chamar **Deeper**; ISJ passa a se chamar **JogoJusto** (6 elementos, índice absoluto 0–100); números do PIBIC corrigidos para 78.497 publicações / 211 perfis / 16-ago a 30-out de 2024. `public/docs/isj.docx` foi desvinculado do site (arquivo mantido no repo por histórico).
