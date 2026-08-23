@@ -317,19 +317,20 @@
 
           <div class="xp">
             <div class="xp-top">
-              <div class="xp-title">Desenvolvedor — App de inteligência executiva</div>
+              <div class="xp-title">Desenvolvedor — Deeper, inteligência sobre executivos</div>
               <div class="xp-date">2025 — atual</div>
             </div>
             <div class="xp-org">Nexus · FSB Holding</div>
             <div class="xp-desc">
-              Aplicação sob demanda para mapear executivos C-level, suas redes de
-              relações institucionais e posicionamentos estratégicos a partir de
-              fontes públicas estruturadas.
+              Plataforma que entrega, em cerca de um minuto, um dossiê completo sobre
+              um executivo brasileiro: trajetória, briefing por IA, menções na imprensa
+              com análise de sentimento e um grafo de conexões com evidência anexada.
+              MVP funcional, validado e aprovado em demonstração.
             </div>
             <ul class="tight">
-              <li>Pipeline de coleta em Python (APIs + scraping) e modelagem do grafo de relações.</li>
-              <li>Camada de posicionamento com enriquecimento e síntese via LLMs.</li>
-              <li>Front em web app sob medida para a equipe de inteligência.</li>
+              <li>Arquitetura em FastAPI, PostgreSQL e fila Redis/RQ, com 11 rotas e 125 testes automatizados.</li>
+              <li>IA em duas camadas: extração estruturada validada por schema antes da síntese do briefing.</li>
+              <li>Grafo de relações com rastreabilidade por aresta e curadoria humana persistida.</li>
             </ul>
           </div>
 
@@ -340,15 +341,16 @@
             </div>
             <div class="xp-org">Liga Acadêmica FGV Quest</div>
             <div class="xp-desc">
-              Lidero a frente técnica da liga. Entrega central: o <strong>Índice de
-              Segurança do Jogador (ISJ)</strong> — métrica que traduz o quanto um jogo
-              respeita o ECA Digital (Lei 15.211/2025), em <strong>parceria com a
-              Prefeitura do Rio de Janeiro</strong>.
+              Lidero a frente técnica da liga. Entrega central: o <strong>JogoJusto ·
+              Índice de Segurança do Jogador</strong> — índice de 0 a 100 que traduz o
+              quanto um jogo digital protege quem joga, à luz do ECA Digital
+              (Lei 15.211/2025), em <strong>parceria com a Prefeitura do Rio de
+              Janeiro</strong>.
             </div>
             <ul class="tight">
-              <li>Definição dos 7 elementos de risco e hierarquia de ponderação do índice.</li>
-              <li>Arquitetura técnica e portal de transparência (em prototipagem).</li>
-              <li>Liderança e capacitação do time de desenvolvedores.</li>
+              <li>Metodologia v1.0: seis elementos de risco com pesos que somam 100 e dupla medida de exposição e mitigação.</li>
+              <li>Desenho de validação por dupla codificação cega, com alfa de Krippendorff (piso 0,67); piloto em execução.</li>
+              <li>Arquitetura técnica, portal de transparência (em prototipagem) e capacitação do time de devs.</li>
             </ul>
           </div>
 
@@ -360,11 +362,12 @@
             <div class="xp-org">FGV ECMI · orient. Eurico Matos</div>
             <div class="xp-desc">
               “O Voto, A Bala e a Floresta” — análise de enquadramento da cobertura
-              eleitoral em <strong>160 veículos</strong> da Amazônia Legal
-              (<strong>61.449 publicações</strong>, 9 capitais).
+              eleitoral em <strong>211 perfis</strong> de mídia local da Amazônia Legal
+              (<strong>78.497 publicações</strong>, 9 capitais). Análise textual
+              concluída; artigo em redação.
             </div>
             <ul class="tight">
-              <li>Clusterização semântica via BERTopic (embeddings + c-TF-IDF).</li>
+              <li>Clusterização semântica via BERTopic guiado: 120 clusters reduzidos a 13 macro-temas.</li>
               <li>Foco em meio ambiente, segurança e infraestrutura — temas sensíveis de reputação.</li>
               <li>Metodologia transferível a monitoramento de percepção e análise de stakeholders.</li>
             </ul>

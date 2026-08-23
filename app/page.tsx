@@ -23,7 +23,7 @@ export default function Page() {
           items={[
             "Dados → Decisão",
             "Python · APIs · Machine Learning",
-            "BERTopic · NLP · Power BI",
+            "BERTopic · NLP · Grafos de relação",
             "Comunicação + Ciência de Dados",
           ]}
         />
@@ -34,9 +34,9 @@ export default function Page() {
         <Metrics />
         <Strip
           items={[
-            "61.449 publicações analisadas",
-            "160 veículos · 9 capitais",
-            "Amazônia Legal · PIBIC 2024/25",
+            "78.497 publicações analisadas",
+            "211 perfis · 9 capitais",
+            "120 clusters · 13 macro-temas",
             "FGV ECMI · FGV EMAp · FGV Quest",
           ]}
         />

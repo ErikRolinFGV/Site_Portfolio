@@ -97,7 +97,7 @@ export function ProjectDeepDive({ project, details }) {
 
       {details.corporateAside && (
         <aside className="dd-aside">
-          <div className="dd-aside-tag mono">/ aplicação corporativa</div>
+          <div className="dd-aside-tag mono">{details.corporateAside.tag || "/ aplicação corporativa"}</div>
           <h3 className="dd-aside-title">{details.corporateAside.title}</h3>
           {details.corporateAside.body.map((p, i) => <p key={i}>{p}</p>)}
           {details.corporateAside.bullets && (

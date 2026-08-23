@@ -39,7 +39,7 @@ export const SKILLS: any[] = [
       ],
       applied: [
         { project: "SAEB", where: "limpeza dos microdados, junção entre proficiência e questionários contextuais, análise de correlações." },
-        { project: "PIBIC", where: "construção da base final de 61.449 publicações a partir da coleta bruta." },
+        { project: "PIBIC", where: "construção da base final de 78.497 publicações a partir da coleta bruta." },
         { project: "FSB · Nexus", where: "consolidação das fontes públicas em uma única base de executivos." },
       ],
     },
@@ -59,7 +59,7 @@ export const SKILLS: any[] = [
         "Documentação das fontes e versionamento dos coletores.",
       ],
       applied: [
-        { project: "PIBIC", where: "uso da API do Atlas da Notícia e coleta via Fanpage Karma para os 160 veículos." },
+        { project: "PIBIC", where: "cruzamento das bases do Atlas da Notícia e coleta pelo DAPP Lab da FGV para os 211 perfis." },
         { project: "FSB · Nexus", where: "coleta automatizada de fontes públicas estruturadas." },
       ],
     },
@@ -99,7 +99,7 @@ export const SKILLS: any[] = [
         "Validação de resultados via inspeção qualitativa e métricas robustas.",
       ],
       applied: [
-        { project: "PIBIC", where: "clusterização semântica dos 61.449 posts via BERTopic." },
+        { project: "PIBIC", where: "clusterização semântica dos 78.497 posts via BERTopic guiado." },
         { project: "FGV Quest", where: "agregação de eventos da sessão em score de Índice de Segurança." },
       ],
     },

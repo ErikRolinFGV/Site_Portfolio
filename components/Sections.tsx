@@ -248,9 +248,9 @@ export function Projects() {
   const projects = [
   {
     id: "01",
-    title: "Mapeamento de CEOs, networks e posicionamento estratégico",
+    title: "Deeper · inteligência sobre executivos brasileiros",
     client: "FSB Holding · Nexus",
-    role: "Desenvolvedor · aplicação sob demanda",
+    role: "Desenvolvedor · concepção e implementação",
     cover: {
       id: "cover-fsb",
       mode: "wordmark",
@@ -259,25 +259,33 @@ export function Projects() {
       caption: "Nexus · FSB Holding"
     },
     status: "live",
-    statusLabel: "em desenvolvimento",
+    statusLabel: "MVP funcional · validado",
     body:
     <>
           <p>
-            Aplicação sob demanda para a <strong>FSB Holding</strong> dedicada a
-            mapear executivos C-level, suas redes de relações institucionais e
-            os posicionamentos estratégicos que assumem publicamente.
+            O <strong>Deeper</strong> é uma ferramenta de inteligência sobre
+            executivos brasileiros que construí para a <strong>Nexus</strong>, o
+            braço de pesquisa e inteligência de dados da FSB Holding.
           </p>
           <p>
-            O objetivo é dar à equipe de inteligência uma camada de leitura
-            sobre quem decide o quê — e com quem — em mercados-chave, com
-            atualização contínua a partir de fontes públicas estruturadas.
+            O analista pesquisa por nome, por cargo ou colando um link do
+            LinkedIn, e recebe em cerca de um minuto um dossiê completo:
+            trajetória profissional, briefing executivo escrito por IA, menções
+            na imprensa com análise de sentimento e um <strong>grafo de conexões
+            navegável</strong> em que cada relação carrega as evidências que a
+            comprovam.
+          </p>
+          <p className="muted-aside">
+            <strong>1 minuto por dossiê · cerca de R$ 1 de custo · 125 testes
+            automatizados.</strong> O mesmo levantamento feito à mão consome de
+            uma a duas horas de analista.
           </p>
         </>,
 
-    tags: ["Python", "APIs", "Grafos", "Web app", "Análise de network"],
+    tags: ["Python", "FastAPI", "Claude Sonnet", "Grafos", "PostgreSQL"],
     visual: <div className="visual-img-wrap"><img src={"/assets/covers/fsb-code.png"} alt="app/models/job.py" /></div>,
     visualLabel: "TRECHO · APP/MODELS/JOB.PY",
-    visualHd: "fsb / ceo_mais"
+    visualHd: "deeper / ceo_mais"
   },
   {
     id: "02",
@@ -288,40 +296,40 @@ export function Projects() {
       id: "cover-pibic",
       mode: "image",
       src: "/assets/covers/pibic-clusters.png",
-      caption: "UMAP · 120 clusters por macro-tema",
+      caption: "MDS clássico sobre distância cosseno · 120 clusters por macro-tema",
       contain: true
     },
     status: "research",
-    statusLabel: "em andamento",
+    statusLabel: "análise concluída · em redação",
     body:
     <>
           <p>
-            Análise de enquadramento da cobertura eleitoral em <strong>160 veículos
-            de mídia local</strong> da Amazônia Legal — <strong>61.449 publicações</strong> no
-            Instagram nas nove capitais da região, entre 16/ago e 28/out de 2024.
+            Análise de enquadramento da cobertura eleitoral em <strong>211 perfis
+            de mídia local</strong> da Amazônia Legal — <strong>78.497 publicações</strong>{" "}
+            no Instagram nas nove capitais da região, entre 16/ago e 30/out de 2024.
           </p>
           <p>
-            Estou conduzindo a <strong>clusterização dos posts coletados</strong>{" "}
-            via BERTopic — embeddings de transformers + c-TF-IDF — para
-            identificar como meio ambiente, segurança pública e infraestrutura
-            ganham (ou perdem) saliência no debate regional.
+            Clusterizei a base com <strong>BERTopic guiado</strong> — embeddings
+            multilíngues, HDBSCAN e c-TF-IDF — chegando a 120 clusters e{" "}
+            <strong>13 macro-temas</strong>. A leitura: na mídia local a floresta
+            é enquadrada como problema de infraestrutura, e toda a segurança
+            pública colapsa num único cluster de linguagem padronizada por release.
           </p>
           <p className="muted-aside">
             <strong>A mesma metodologia se aplica fora do jornalismo:</strong>{" "}
-            monitorar como uma marca é enquadrada por veículos e influenciadores,
-            mapear quais temas dominam o discurso sobre uma empresa em uma região
-            e identificar frames emergentes em torno de qualquer ator público.
+            o método separou gênero, não só assunto — a diferença entre saber o
+            quanto se fala de uma marca e saber <em>como</em> se fala.
           </p>
         </>,
 
-    tags: ["BERTopic", "NLP", "Embeddings", "c-TF-IDF", "Análise de enquadramento"],
+    tags: ["BERTopic", "NLP", "Embeddings", "HDBSCAN", "Análise de enquadramento"],
     visual: <div className="visual-img-wrap"><img src={"/assets/covers/wordcloud-code.png"} alt="Notebook BERTopic" /></div>,
     visualLabel: "NOTEBOOK · WORDCLOUD POR MACRO-TEMA",
     visualHd: "pibic / bertopic_notebook"
   },
   {
     id: "03",
-    title: "ISJ · Índice de Segurança do Jogador",
+    title: "JogoJusto · Índice de Segurança do Jogador",
     client: "FGV Quest · cofundador · parceria com a Prefeitura do Rio",
     role: "Diretor de Desenvolvimento",
     cover: {
@@ -331,30 +339,36 @@ export function Projects() {
       caption: "Time da FGV Quest · 2026"
     },
     status: "lead",
-    statusLabel: "em curso",
+    statusLabel: "piloto em execução",
     body:
     <>
           <p>
             Cofundei a Liga Acadêmica <strong>FGV Quest</strong> e lidero a
             frente técnica como Diretor de Desenvolvimento. Nossa entrega
-            central é o <strong>Índice de Segurança do Jogador (ISJ)</strong>:
-            uma métrica única e comparável que traduz, em um número, o quanto
-            um jogo digital respeita os princípios do <strong>ECA Digital
-            (Lei 15.211/2025)</strong>.
+            central é o <strong>JogoJusto</strong>: um índice de 0 a 100 que
+            traduz, num número auditável, o quanto um jogo digital protege quem
+            joga — à luz do <strong>ECA Digital (Lei 15.211/2025)</strong>, em
+            vigor desde março de 2026.
           </p>
           <p>
-            Em parceria com a <strong>Prefeitura do Rio de Janeiro</strong>,
-            estamos construindo um portal de transparência onde a metodologia
-            do índice é aberta à consulta pública e cada jogo avaliado recebe
-            uma página com sua pontuação detalhada por elemento — no mesmo
-            espírito de índices consolidados como o Ibovespa.
+            São seis elementos de mecânica predatória, com pesos que somam 100 e
+            duas medidas por elemento: o quanto o risco está presente e o quanto
+            existe controle real contra ele. Em parceria com a{" "}
+            <strong>Prefeitura do Rio de Janeiro</strong>, construímos um portal
+            de transparência com a metodologia aberta à consulta pública.
+          </p>
+          <p className="muted-aside">
+            O índice <strong>não</strong> mede se o jogo é bom, divertido ou
+            violento, nem para que idade ele serve — isso já é feito por
+            ClassInd, ESRB e PEGI. O recorte é único: mecânica predatória e
+            segurança do jogador.
           </p>
         </>,
 
-    tags: ["Liderança", "Parceria pública", "Policy + dados", "ECA Digital", "Arquitetura"],
+    tags: ["Liderança técnica", "Metodologia de pesquisa", "Policy + dados", "ECA Digital", "Arquitetura"],
     visual: <div className="visual-wordmark-wrap"><img src={"/assets/logos/fgvquest.png"} alt="FGV Quest" /></div>,
     visualLabel: "LIGA ACADÊMICA · FGV QUEST",
-    visualHd: "quest / brand"
+    visualHd: "jogojusto / brand"
   }];
 
 
@@ -524,8 +538,8 @@ export function About() {
                 <div><b>Complementar</b><span>FGV EMAp · Ciência de Dados</span></div>
                 <div><b>Pesquisa</b><span>PIBIC 2024/2025 · "O Voto, A Bala e a Floresta" · orient. Eurico Matos</span></div>
                 <div><b>ARTIGOS PRONTOS</b><span>Análise Exploratória do SAEB · FGV, 2024</span></div>
-                <div><b>Liderança</b><span>Diretor de Desenvolvimento · Liga Acadêmica FGV Quest</span></div>
-                <div><b>Mercado</b><span>Desenvolvedor sob demanda · FSB Holding</span></div>
+                <div><b>Liderança</b><span>Cofundador e Diretor de Desenvolvimento · Liga Acadêmica FGV Quest</span></div>
+                <div><b>Mercado</b><span>Deeper · inteligência sobre executivos · FSB Holding / Nexus</span></div>
                 <div><b>Localização</b><span>Rio de Janeiro · BR</span></div>
               </div>
             </div>
