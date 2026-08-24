@@ -37,7 +37,7 @@ export default function Page() {
             "78.497 publicações analisadas",
             "211 perfis · 9 capitais",
             "120 clusters · 13 macro-temas",
-            "FGV ECMI · FGV EMAp · FGV Quest",
+            "FGV Comunicação · FGV EMAp · FGV Quest",
           ]}
         />
         <Timeline />

@@ -7,7 +7,7 @@ import { FadeIn } from "./FadeIn";
 // Cada logo é um image-slot — substituível pelo usuário.
 export function LogosBar() {
   const items = [
-    { id: "logo-fgv-ecmi", label: "FGV ECMI", note: "Comunicação", src: "/uploads/logo-fgv-ecmi.webp" },
+    { id: "logo-fgv-ecmi", label: "FGV Comunicação", note: "Graduação", src: "/uploads/logo-fgv-ecmi.webp" },
     { id: "logo-fgv-emap", label: "FGV EMAp", note: "Ciência de Dados", src: "/uploads/logo-fgv-emap.webp" },
     { id: "logo-pibic",    label: "PIBIC",    note: "FGV", src: "/uploads/logo-pibic.webp" },
     { id: "logo-fsb",      label: "FSB Holding", note: "Nexus", href: "https://www.nexus.fsb.com.br/", src: "/uploads/logo-fsb.webp" },
@@ -123,12 +123,12 @@ export function Timeline() {
     },
     {
       year: "2025.1", tag: "virada",
-      title: "Transferência para a FGV ECMI · Comunicação",
+      title: "Transferência para a FGV Comunicação",
       body: "Decido juntar comunicação à base técnica. EMAp vira formação complementar. Início do PIBIC \"O Voto, A Bala e a Floresta\" — coleta e análise de cobertura midiática na Amazônia Legal.",
     },
     {
       year: "2025.2", tag: "lançamento",
-      title: "Cofunda a FGV Quest · Projeto para a Nexus (FSB Holding)",
+      title: "Frente técnica da FGV Quest · Projeto para a Nexus (FSB Holding)",
       body: "Como Diretor de Desenvolvimento, conduzo o time técnico da liga, entregamos o site institucional e abrimos parceria com a Prefeitura do Rio para um índice de segurança em jogo digital. Em paralelo, começo a desenvolver o app de mapeamento de CEOs para a Nexus.",
       tagStyle: "accent",
     },
@@ -145,7 +145,7 @@ export function Timeline() {
     },
     {
       year: "2028", tag: "previsto",
-      title: "Graduação · FGV ECMI",
+      title: "Graduação · FGV Comunicação",
       body: "Conclusão do curso de Comunicação com formação complementar em Ciência de Dados.",
       tagStyle: "ghost",
     },

@@ -82,7 +82,7 @@ export function Hero({ centered = false }) {
             <div className="hero-photo-wrap">
               <img src="/uploads/erik-portrait.webp" alt="Erik Rolin" className="slot-img" />
               <div className="hero-photo-meta">
-                ERIK ROLIN / FGV ECMI · EMAp
+                ERIK ROLIN / FGV COMUNICAÇÃO · EMAp
               </div>
             </div>
           </FadeIn>
@@ -276,9 +276,9 @@ export function Projects() {
             comprovam.
           </p>
           <p className="muted-aside">
-            <strong>1 minuto por dossiê · cerca de R$ 1 de custo · 125 testes
-            automatizados.</strong> O mesmo levantamento feito à mão consome de
-            uma a duas horas de analista.
+            <strong>1 minuto por dossiê · 125 testes automatizados · 11 rotas
+            de API.</strong> O mesmo levantamento feito à mão consome de uma a
+            duas horas de analista.
           </p>
         </>,
 
@@ -290,7 +290,7 @@ export function Projects() {
   {
     id: "02",
     title: "O Voto, A Bala e a Floresta",
-    client: "PIBIC · FGV ECMI",
+    client: "PIBIC · FGV Comunicação",
     role: "Bolsista de Iniciação Científica · orient. Eurico Matos",
     cover: {
       id: "cover-pibic",
@@ -330,7 +330,7 @@ export function Projects() {
   {
     id: "03",
     title: "JogoJusto · Índice de Segurança do Jogador",
-    client: "FGV Quest · cofundador · parceria com a Prefeitura do Rio",
+    client: "FGV Quest · parceria com a Prefeitura do Rio",
     role: "Diretor de Desenvolvimento",
     cover: {
       id: "cover-quest",
@@ -343,9 +343,9 @@ export function Projects() {
     body:
     <>
           <p>
-            Cofundei a Liga Acadêmica <strong>FGV Quest</strong> e lidero a
-            frente técnica como Diretor de Desenvolvimento. Nossa entrega
-            central é o <strong>JogoJusto</strong>: um índice de 0 a 100 que
+            Lidero a frente técnica da Liga Acadêmica <strong>FGV Quest</strong>{" "}
+            como Diretor de Desenvolvimento. Nossa entrega central é o{" "}
+            <strong>JogoJusto</strong>: um índice de 0 a 100 que
             traduz, num número auditável, o quanto um jogo digital protege quem
             joga — à luz do <strong>ECA Digital (Lei 15.211/2025)</strong>, em
             vigor desde março de 2026.
@@ -524,7 +524,7 @@ export function About() {
           <FadeIn delay={120}>
             <div className="about-body">
               <p>
-                Sou Erik. Estudo Comunicação na FGV — ECMI, 3º período — com
+                Sou Erik. Estudo Comunicação na FGV Comunicação, com
                 formação complementar em Ciência de Dados pela FGV EMAp.
               </p>
               <p>
@@ -534,11 +534,11 @@ export function About() {
                 técnica com leitura comunicacional.
               </p>
               <div className="about-list">
-                <div><b>Formação</b><span>FGV ECMI · Comunicação · 3º período · em curso</span></div>
+                <div><b>Formação</b><span>FGV Comunicação · graduação em curso · previsão 2028</span></div>
                 <div><b>Complementar</b><span>FGV EMAp · Ciência de Dados</span></div>
                 <div><b>Pesquisa</b><span>PIBIC 2024/2025 · "O Voto, A Bala e a Floresta" · orient. Eurico Matos</span></div>
                 <div><b>ARTIGOS PRONTOS</b><span>Análise Exploratória do SAEB · FGV, 2024</span></div>
-                <div><b>Liderança</b><span>Cofundador e Diretor de Desenvolvimento · Liga Acadêmica FGV Quest</span></div>
+                <div><b>Liderança</b><span>Diretor de Desenvolvimento · Liga Acadêmica FGV Quest</span></div>
                 <div><b>Mercado</b><span>Deeper · inteligência sobre executivos · FSB Holding / Nexus</span></div>
                 <div><b>Localização</b><span>Rio de Janeiro · BR</span></div>
               </div>
@@ -604,7 +604,7 @@ export function Footer() {
     <footer className="footer">
       <div className="wrap" style={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
         <span>© 2026 · Erik Rolin</span>
-        <span>FGV ECMI · EMAp · Rio de Janeiro</span>
+        <span>FGV Comunicação · EMAp · Rio de Janeiro</span>
       </div>
     </footer>);
 

@@ -27,7 +27,7 @@ export const PROJECT_DETAILS: any = {
     ],
     results: [
       "MVP funcional, validado com dossiês reais de executivos brasileiros e aprovado em demonstração na FSB. Apresentação a um sócio da Nexus marcada.",
-      "Um dossiê completo em cerca de um minuto, a um custo aproximado de R$ 1 — contra uma a duas horas de trabalho manual de analista.",
+      "Um dossiê completo em cerca de um minuto — contra uma a duas horas de trabalho manual de analista.",
       "125 testes automatizados, 11 rotas de API e 7 migrations. A suíte é o que permite outra pessoa alterar o sistema sem quebrá-lo.",
       "Seis salvaguardas de qualidade, todas nascidas de erros reais encontrados em teste: homônimo na busca e na imprensa, matéria assinada pelo próprio alvo, ranking tratado como relação genuína e data extraída do trecho errado.",
       "Em aberto: a ferramenta é sob demanda, com cache de sete dias. Monitoramento contínuo, cobertura internacional e quadros societários estão no roadmap, não no produto.",
