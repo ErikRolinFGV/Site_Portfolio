@@ -1,0 +1,29 @@
+# Normaliza quebras de linha e protege arquivos binarios.
+#
+# Contexto (24/08/2026): o repositorio era editado tanto do Windows quanto de
+# um ambiente Linux, sem regra definida. Isso causava dois problemas:
+#
+# 1. Diffs gigantes em arquivos de texto que na pratica nao mudaram, porque as
+#    quebras de linha alternavam entre CRLF e LF a cada edicao.
+# 2. Corrupcao de binarios: o PDF public/docs/jogojusto-metodologia-v1.pdf
+#    recebeu 111 bytes CR injetados, porque o git nao o detectou como binario
+#    (nao ha bytes NUL nos primeiros 8000) e aplicou a conversao de texto.
+#
+# A regra abaixo faz o repositorio guardar sempre LF, deixando o git converter
+# para o padrao do sistema na hora do checkout. As excecoes marcam o que nunca
+# deve ser tocado.
+
+* text=auto
+
+*.pdf   binary
+*.docx  binary
+*.xlsx  binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.ico   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
