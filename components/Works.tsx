@@ -160,7 +160,7 @@ export function Works() {
                     </div>
                     <div>
 
-                      <div style={{ fontFamily: 'var(--font-heading)', fontSize: '28px', color: 'var(--color-accent-700)' }}>10</div><div style={{ fontSize: '12px', color: 'color-mix(in srgb, var(--ink) 62%, transparent)' }}>avaliadores&nbsp;</div>
+                      <div style={{ fontFamily: 'var(--font-heading)', fontSize: '28px', color: 'var(--color-accent-700)' }}>10</div><div style={{ fontSize: '12px', color: 'color-mix(in srgb, var(--ink) 62%, transparent)' }}>avaliadores no piloto</div>
                     </div>
                     <div>
                       <div style={{ fontFamily: 'var(--font-heading)', fontSize: '28px', color: 'var(--color-accent-700)' }}>0,67</div>
