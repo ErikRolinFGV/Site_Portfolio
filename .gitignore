@@ -4,3 +4,9 @@ out
 .DS_Store
 *.log
 .env*
+
+# Documento de projeto do JogoJusto de maio/2026, quando o indice ainda se
+# chamava ISJ, tinha sete elementos e usava calculo comparativo. Foi retirado
+# do repositorio em ago/2026 porque contradiz a metodologia v1.0 publicada em
+# public/docs/jogojusto-metodologia-v1.pdf e seguia baixavel pela URL direta.
+public/docs/isj.docx
