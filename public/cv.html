@@ -1,468 +1,164 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Erik Rolin — Currículo</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Erik Nonato Rolin · Currículo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
 <style>
   :root {
-    --fg: #0f1e14;
-    --fg-soft: #1c2e23;
-    --muted: #5a6b5e;
-    --muted-2: #8a9a8d;
-    --line: #d3dac8;
-    --accent: #2e5c3e;
-    --accent-bright: #4a8159;
-    --bg: #ffffff;
-    --surface: #f4f6ee;
-    --sans: "Geist", system-ui, sans-serif;
-    --mono: "Geist Mono", ui-monospace, monospace;
+    --ink: #100f0d;
+    --color-accent: #c67139;
+    --color-accent-700: #8c491a;
+    --color-accent-600: #b2622d;
+    --font-body: "Figtree", system-ui, sans-serif;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { background: #e6e9df; }
+  * { box-sizing: border-box; }
   body {
-    font-family: var(--sans);
-    color: var(--fg);
-    font-size: 10.2px;
-    line-height: 1.45;
+    margin: 0; padding: 28px 16px 60px;
+    background: #d9cdb8;
+    font-family: var(--font-body); color: var(--ink);
     -webkit-font-smoothing: antialiased;
   }
+  a { color: var(--color-accent-700); text-decoration: none; }
+  a:hover { color: var(--color-accent-600); }
+
+  /* Folha única de A4. O que passar da altura é descartado, nao flui para uma
+     segunda pagina — se acrescentar conteudo, confira que o rodape sobrevive. */
   .page {
-    width: 210mm;
-    min-height: 297mm;
-    margin: 16px auto;
-    background: var(--bg);
-    padding: 16mm 15mm 14mm;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0;
+    width: 8.27in; height: 11.69in; overflow: hidden;
+    margin: 0 auto; box-shadow: 0 12px 32px rgba(46, 43, 37, 0.28);
   }
 
-  /* Header */
-  .cv-head {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 24px;
-    align-items: start;
-    padding-bottom: 16px;
-    border-bottom: 2px solid var(--fg);
+  .print-bar {
+    max-width: 8.27in; margin: 0 auto 16px; display: flex; justify-content: flex-end;
   }
-  .cv-name {
-    font-size: 30px;
-    font-weight: 600;
-    letter-spacing: -0.025em;
-    line-height: 1;
+  .print-btn {
+    font: 600 14px/1.2 var(--font-body); color: #fff; background: var(--color-accent);
+    border: 0; border-radius: 999px; padding: 10px 20px; cursor: pointer;
   }
-  .cv-role {
-    font-family: var(--mono);
-    font-size: 10.5px;
-    color: var(--accent);
-    margin-top: 7px;
-    letter-spacing: 0.02em;
-  }
-  .cv-tagline {
-    margin-top: 10px;
-    font-size: 11px;
-    color: var(--fg-soft);
-    max-width: 52ch;
-    line-height: 1.5;
-  }
-  .cv-contact {
-    text-align: right;
-    font-family: var(--mono);
-    font-size: 9px;
-    color: var(--muted);
-    line-height: 1.7;
-    letter-spacing: 0.01em;
-    white-space: nowrap;
-  }
-  .cv-contact a { color: var(--fg-soft); text-decoration: none; }
-  .cv-contact .lbl { color: var(--muted-2); display: inline-block; width: 18px; }
-
-  /* Body grid */
-  .cv-body {
-    display: grid;
-    grid-template-columns: 1.65fr 1fr;
-    gap: 26px;
-    margin-top: 16px;
-  }
-
-  /* Thesis band (fills header→body gap, leads with the hook) */
-  .cv-thesis {
-    margin-top: 16px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-left: 3px solid var(--accent);
-    border-radius: 6px;
-    padding: 14px 18px;
-  }
-  .cv-thesis-stat {
-    font-size: 38px;
-    font-weight: 600;
-    letter-spacing: -0.03em;
-    color: var(--accent);
-    line-height: 1;
-    flex: 0 0 auto;
-  }
-  .cv-thesis-text {
-    font-size: 10.2px;
-    color: var(--fg-soft);
-    line-height: 1.5;
-  }
-  .cv-thesis-text strong { color: var(--fg); font-weight: 600; }
-  .col-left > section + section,
-  .col-right > section + section { margin-top: 17px; }
-
-  .sec-label {
-    font-family: var(--mono);
-    font-size: 8.5px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--accent);
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    margin-bottom: 11px;
-  }
-  .sec-label::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: var(--line);
-  }
-
-  /* Experience item */
-  .xp { margin-bottom: 13px; }
-  .xp:last-child { margin-bottom: 0; }
-  .xp-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 12px;
-  }
-  .xp-title { font-size: 11.5px; font-weight: 600; letter-spacing: -0.01em; }
-  .xp-date {
-    font-family: var(--mono);
-    font-size: 8.5px;
-    color: var(--muted);
-    white-space: nowrap;
-    letter-spacing: 0.02em;
-  }
-  .xp-org {
-    font-size: 10px;
-    color: var(--accent);
-    font-weight: 500;
-    margin-top: 1px;
-  }
-  .xp-desc {
-    font-size: 9.8px;
-    color: var(--fg-soft);
-    margin-top: 4px;
-    line-height: 1.48;
-  }
-  .xp-desc strong { color: var(--fg); font-weight: 600; }
-
-  /* Bullets */
-  ul.tight { list-style: none; margin-top: 5px; }
-  ul.tight li {
-    position: relative;
-    padding-left: 13px;
-    font-size: 9.6px;
-    color: var(--fg-soft);
-    margin-bottom: 3px;
-    line-height: 1.45;
-  }
-  ul.tight li::before {
-    content: "";
-    position: absolute;
-    left: 0; top: 6.5px;
-    width: 6px; height: 1px;
-    background: var(--accent);
-  }
-
-  /* Right column blocks */
-  .skill-group { margin-bottom: 10px; }
-  .skill-group:last-child { margin-bottom: 0; }
-  .skill-group-name {
-    font-size: 9.5px;
-    font-weight: 600;
-    margin-bottom: 4px;
-  }
-  .chips { display: flex; flex-wrap: wrap; gap: 4px; }
-  .chip {
-    font-family: var(--mono);
-    font-size: 8.2px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: 2.5px 8px;
-    color: var(--fg-soft);
-    letter-spacing: 0.01em;
-    background: var(--surface);
-  }
-
-  .edu-item { margin-bottom: 10px; }
-  .edu-item:last-child { margin-bottom: 0; }
-  .edu-deg { font-size: 10px; font-weight: 600; line-height: 1.25; }
-  .edu-school { font-size: 9.3px; color: var(--accent); margin-top: 1px; }
-  .edu-date { font-family: var(--mono); font-size: 8.3px; color: var(--muted); margin-top: 2px; }
-
-  .lang-row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 9.5px;
-    padding: 3px 0;
-    border-bottom: 1px solid var(--line);
-  }
-  .lang-row:last-child { border-bottom: 0; }
-  .lang-row .lvl { font-family: var(--mono); font-size: 8.3px; color: var(--muted); }
-
-  .highlight-box {
-    background: var(--surface);
-    border-left: 2px solid var(--accent);
-    padding: 9px 11px;
-    font-size: 9.4px;
-    color: var(--fg-soft);
-    line-height: 1.5;
-  }
-  .highlight-box strong { color: var(--accent); font-weight: 600; }
-
-  .cv-foot {
-    margin-top: 16px;
-    padding-top: 9px;
-    border-top: 1px solid var(--line);
-    font-family: var(--mono);
-    font-size: 8px;
-    color: var(--muted-2);
-    display: flex;
-    justify-content: space-between;
-    letter-spacing: 0.02em;
-  }
+  .print-btn:hover { background: var(--color-accent-600); }
 
   @media print {
+    body { padding: 0; background: #fff; }
+    .print-bar { display: none; }
+    .page { box-shadow: none; width: 100%; height: auto; }
     @page { size: A4; margin: 0; }
-    html, body { background: #fff; }
-    .page { margin: 0; box-shadow: none; width: 210mm; min-height: 297mm; }
-    .no-print { display: none; }
-  }
-  .toolbar {
-    max-width: 210mm;
-    margin: 16px auto 0;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    font-family: var(--mono);
-    font-size: 11px;
-    color: #5a6b5e;
-  }
-  .toolbar button {
-    font: inherit;
-    background: var(--accent);
-    color: #fff;
-    border: 0;
-    border-radius: 999px;
-    padding: 8px 18px;
-    cursor: pointer;
   }
 </style>
 </head>
 <body>
-  <div class="toolbar no-print">
-    <button onclick="window.print()">Salvar como PDF ↓</button>
-    <span>Use “Salvar como PDF” na caixa de impressão · A4</span>
-  </div>
 
-  <div class="page">
-    <header class="cv-head">
+<div class="print-bar">
+  <button class="print-btn" onclick="window.print()">Salvar como PDF ↓</button>
+</div>
+
+<section class="page" style="background: #fff; color: var(--ink); font-family: var(--font-body); padding: 0.44in 0.58in; display: flex; flex-direction: column; gap: 12px; font-size: 9.8pt; line-height: 1.45">
+
+    <header style="display: grid; grid-template-columns: 1fr auto; gap: 26px; align-items: start; border-bottom: 2.5px solid var(--ink); padding-bottom: 12px">
       <div>
-        <div class="cv-name">Erik Nonato Rolin</div>
-        <div class="cv-role">COMUNICAÇÃO + CIÊNCIA DE DADOS</div>
-        <p class="cv-tagline">
-          Transformo dados dispersos de plataformas digitais em narrativa e decisão
-          — monitoramento de percepção pública, análise de discurso e inteligência
-          de reputação. Vivo no ponto exato entre comunicação estratégica e ciência
-          de dados.
-        </p>
+        <h1 style="font-family: var(--font-body); font-weight: 800; font-size: 25pt; letter-spacing: -0.03em; line-height: 1; margin: 0">Erik Nonato Rolin</h1>
+        <div style="font-size: 10.5pt; font-weight: 600; margin-top: 5px; color: var(--color-accent-700)">Comunicação &amp; Ciência de Dados · Rio de Janeiro · aberto a estágio</div>
       </div>
-      <div class="cv-contact">
-        <div><span class="lbl">@</span><a href="mailto:eriknrolin@gmail.com">eriknrolin@gmail.com</a></div>
-        <div><span class="lbl">tel</span>+55 (21) 99202-5739</div>
-        <div><span class="lbl">in</span><a href="https://www.linkedin.com/in/erikrolin/">/in/erikrolin</a></div>
-        <div><span class="lbl">gh</span><a href="https://github.com/ErikRolinFGV">ErikRolinFGV</a></div>
-        <div><span class="lbl">loc</span>Rio de Janeiro · BR</div>
+      <div style="text-align: right; font-size: 8.6pt; line-height: 1.6; color: color-mix(in srgb, var(--ink) 80%, transparent)">
+        <div>eriknrolin@gmail.com</div>
+        <div>+55 (21) 99202-5739</div>
+        <div>linkedin.com/in/erikrolin</div>
+        <div>github.com/ErikRolinFGV</div>
+        <div style="font-weight: 700; color: var(--ink)">eriknrolin-portfolio.vercel.app</div>
       </div>
     </header>
 
-    <div class="cv-thesis">
-      <span class="cv-thesis-stat">&lt;30%</span>
-      <span class="cv-thesis-text">
-        A maioria das empresas usa menos de <strong>30% dos dados</strong> que já possui.
-        Trabalho exatamente nesse gap — unindo <strong>rigor de engenharia</strong> à
-        <strong>clareza de comunicação</strong> para transformar dado em reputação,
-        percepção e decisão.
-      </span>
+    <div style="background: #f7f3ec; border-left: 3px solid var(--color-accent); padding: 13px 16px">
+      <div style="font-size: 13.5pt; font-weight: 700; letter-spacing: -0.02em">“Pra mim, comunicar é transformar dado em decisão.”</div>
+      <p style="margin: 7px 0 0; font-size: 9.8pt; line-height: 1.5">Estudo Comunicação na FGV Comunicação, com formação complementar em Ciência de Dados na FGV EMAp. Construo as ferramentas que coletam e analisam dados de plataformas digitais, e escrevo a leitura que sai delas.</p>
     </div>
 
-    <div class="cv-body">
-      <!-- LEFT -->
-      <div class="col-left">
+    <section>
+      <h2 style="font-family: var(--font-body); font-size: 8.4pt; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 10px; padding-bottom: 5px; border-bottom: 1px solid color-mix(in srgb, var(--ink) 20%, transparent)">Experiência &amp; projetos</h2>
+
+      <article style="break-inside: avoid; margin-bottom: 11px">
+        <div style="display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: baseline">
+          <div style="font-size: 11pt; font-weight: 800; letter-spacing: -0.02em">Desenvolvedor · <span style="color: var(--color-accent-700)">Deeper</span>, plataforma de inteligência sobre executivos</div>
+          <div style="font-size: 8.8pt; font-weight: 600; white-space: nowrap; color: color-mix(in srgb, var(--ink) 65%, transparent)">Nexus · FSB Holding · 2025 — atual</div>
+        </div>
+        <p style="margin: 5px 0 0; font-size: 9.6pt">Criei do zero uma plataforma que entrega em 20 a 60 segundos o dossiê que um analista levava de uma a duas horas para montar. MVP validado com dossiês reais e aprovado em demonstração.</p>
+        <ul style="margin: 6px 0 0; padding-left: 15px; font-size: 9.5pt; line-height: 1.45">
+          <li>Construí o pipeline em Python, FastAPI, PostgreSQL e Redis + RQ: 125 testes automatizados, 11 rotas de API, 10 portais de imprensa cobertos.</li>
+          <li>Modelei o grafo de relações entre executivos, empresas e setores, e desenhei seis salvaguardas de qualidade a partir de erros reais em teste.</li>
+        </ul>
+      </article>
+
+      <article style="break-inside: avoid; margin-bottom: 11px">
+        <div style="display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: baseline">
+          <div style="font-size: 11pt; font-weight: 800; letter-spacing: -0.02em">Diretor de Desenvolvimento · <span style="color: var(--color-accent-700)">JogoJusto</span>, Índice de Segurança do Jogador</div>
+          <div style="font-size: 8.8pt; font-weight: 600; white-space: nowrap; color: color-mix(in srgb, var(--ink) 65%, transparent)">FGV Quest · Prefeitura do Rio · 2025 — atual</div>
+        </div>
+        <p style="margin: 5px 0 0; font-size: 9.6pt">Lidero o time técnico da liga, em parceria com a Prefeitura do Rio. O índice traduz o ECA Digital (Lei nº 15.211/2025) para o público: mede mecânica predatória e segurança do jogador, não qualidade nem faixa de idade.</p>
+        <ul style="margin: 6px 0 0; padding-left: 15px; font-size: 9.5pt; line-height: 1.45">
+          <li>Defini os seis elementos de risco e a hierarquia de pesos do índice.</li>
+          <li>Desenhei a validação: dupla codificação em cego, duas rodadas independentes e alfa de Krippendorff com piso de 0,67.</li>
+          <li>Coordeno a equipe, faço code review e capacito os desenvolvedores.</li>
+        </ul>
+      </article>
+
+      <article style="break-inside: avoid">
+        <div style="display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: baseline">
+          <div style="font-size: 11pt; font-weight: 800; letter-spacing: -0.02em">Bolsista de Iniciação Científica · <span style="color: var(--color-accent-700)">O Voto, A Bala e a Floresta</span></div>
+          <div style="font-size: 8.8pt; font-weight: 600; white-space: nowrap; color: color-mix(in srgb, var(--ink) 65%, transparent)">FGV Comunicação · 2025 — atual</div>
+        </div>
+        <p style="margin: 5px 0 0; font-size: 9.6pt">Analiso o enquadramento da cobertura eleitoral em veículos de mídia local da Amazônia Legal, sob orientação do prof. Eurico Matos. Análise textual concluída, artigo em redação.</p>
+        <ul style="margin: 6px 0 0; padding-left: 15px; font-size: 9.5pt; line-height: 1.45">
+          <li>Classifiquei 78.497 publicações de 211 perfis nas 9 capitais com BERTopic guiado por sementes: 120 clusters reduzidos a 13 macro-temas.</li>
+          <li>Validei o resultado em três cenários de robustez, com correlação de postos entre 0,89 e 0,99.</li>
+        </ul>
+      </article>
+    </section>
+
+    <div style="display: grid; grid-template-columns: 1.05fr 1fr; gap: 22px; align-items: start">
+      <section>
+        <h2 style="font-family: var(--font-body); font-size: 8.4pt; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 10px; padding-bottom: 5px; border-bottom: 1px solid color-mix(in srgb, var(--ink) 20%, transparent)">Competências</h2>
+        <div style="display: flex; flex-direction: column; gap: 6px; font-size: 9.5pt; line-height: 1.45">
+          <div><span style="font-weight: 800">Dados e código</span> · Python (POO), Pandas, SQL, PostgreSQL, FastAPI, Redis, Git, estatística, APIs</div>
+          <div><span style="font-weight: 800">NLP e IA</span> · BERTopic, embeddings, clusterização, LLMs, IA generativa aplicada</div>
+          <div><span style="font-weight: 800">Comunicação</span> · análise de enquadramento, monitoramento de mídia, escuta social, storytelling de dados, redação técnica</div>
+          <div><span style="font-weight: 800">Método e liderança</span> · desenho de validação, confiabilidade entre avaliadores, coordenação técnica, code review, mentoria</div>
+        </div>
+      </section>
+
+      <div style="display: flex; flex-direction: column; gap: 15px">
         <section>
-          <div class="sec-label">Experiência & Projetos</div>
-
-          <div class="xp">
-            <div class="xp-top">
-              <div class="xp-title">Desenvolvedor — Deeper, inteligência sobre executivos</div>
-              <div class="xp-date">2025 — atual</div>
+          <h2 style="font-family: var(--font-body); font-size: 8.4pt; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 10px; padding-bottom: 5px; border-bottom: 1px solid color-mix(in srgb, var(--ink) 20%, transparent)">Formação</h2>
+          <div style="display: flex; flex-direction: column; gap: 6px; font-size: 9.5pt; line-height: 1.45">
+            <div style="display: grid; grid-template-columns: 1fr auto; gap: 12px">
+              <div><span style="font-weight: 800">Comunicação</span> · FGV Comunicação</div>
+              <div style="white-space: nowrap; color: color-mix(in srgb, var(--ink) 65%, transparent)">2025 — 2028</div>
             </div>
-            <div class="xp-org">Nexus · FSB Holding</div>
-            <div class="xp-desc">
-              Plataforma que entrega, em cerca de um minuto, um dossiê completo sobre
-              um executivo brasileiro: trajetória, briefing por IA, menções na imprensa
-              com análise de sentimento e um grafo de conexões com evidência anexada.
-              MVP funcional, validado e aprovado em demonstração.
+            <div style="display: grid; grid-template-columns: 1fr auto; gap: 12px">
+              <div><span style="font-weight: 800">Ciência de Dados</span> · FGV EMAp, formação complementar</div>
+              <div style="white-space: nowrap; color: color-mix(in srgb, var(--ink) 65%, transparent)">2024 — 2025</div>
             </div>
-            <ul class="tight">
-              <li>Arquitetura em FastAPI, PostgreSQL e fila Redis/RQ, com 11 rotas e 125 testes automatizados.</li>
-              <li>IA em duas camadas: extração estruturada validada por schema antes da síntese do briefing.</li>
-              <li>Grafo de relações com rastreabilidade por aresta e curadoria humana persistida.</li>
-            </ul>
-          </div>
-
-          <div class="xp">
-            <div class="xp-top">
-              <div class="xp-title">Diretor de Desenvolvimento</div>
-              <div class="xp-date">2025 — atual</div>
-            </div>
-            <div class="xp-org">Liga Acadêmica FGV Quest</div>
-            <div class="xp-desc">
-              Lidero a frente técnica da liga. Entrega central: o <strong>JogoJusto ·
-              Índice de Segurança do Jogador</strong> — índice de 0 a 100 que traduz o
-              quanto um jogo digital protege quem joga, à luz do ECA Digital
-              (Lei 15.211/2025), em <strong>parceria com a Prefeitura do Rio de
-              Janeiro</strong>.
-            </div>
-            <ul class="tight">
-              <li>Metodologia v1.0: seis elementos de risco com pesos que somam 100 e dupla medida de exposição e mitigação.</li>
-              <li>Desenho de validação por dupla codificação cega, com alfa de Krippendorff (piso 0,67); piloto em execução.</li>
-              <li>Arquitetura técnica, portal de transparência (em prototipagem) e capacitação do time de devs.</li>
-            </ul>
-          </div>
-
-          <div class="xp">
-            <div class="xp-top">
-              <div class="xp-title">Bolsista de Iniciação Científica (PIBIC)</div>
-              <div class="xp-date">2025 — 2026</div>
-            </div>
-            <div class="xp-org">FGV Comunicação · orient. Eurico Matos</div>
-            <div class="xp-desc">
-              “O Voto, A Bala e a Floresta” — análise de enquadramento da cobertura
-              eleitoral em <strong>211 perfis</strong> de mídia local da Amazônia Legal
-              (<strong>78.497 publicações</strong>, 9 capitais). Análise textual
-              concluída; artigo em redação.
-            </div>
-            <ul class="tight">
-              <li>Clusterização semântica via BERTopic guiado: 120 clusters reduzidos a 13 macro-temas.</li>
-              <li>Foco em meio ambiente, segurança e infraestrutura — temas sensíveis de reputação.</li>
-              <li>Metodologia transferível a monitoramento de percepção e análise de stakeholders.</li>
-            </ul>
-          </div>
-
-          <div class="xp">
-            <div class="xp-top">
-              <div class="xp-title">Análise Exploratória de Fatores Sociais no SAEB</div>
-              <div class="xp-date">2024.2</div>
-            </div>
-            <div class="xp-org">Pesquisa aplicada · FGV EMAp</div>
-            <div class="xp-desc">
-              Estudo dos microdados do SAEB sobre correlações entre variáveis sociais,
-              econômicas e desempenho educacional. Coautoria com Bruno Cavalli e
-              Nicholas Farrel.
+            <div style="display: grid; grid-template-columns: 1fr auto; gap: 12px">
+              <div>Ensino Médio · Colégio Pedro II, Campus Tijuca</div>
+              <div style="white-space: nowrap; color: color-mix(in srgb, var(--ink) 65%, transparent)">2022</div>
             </div>
           </div>
         </section>
-      </div>
-
-      <!-- RIGHT -->
-      <div class="col-right">
         <section>
-          <div class="sec-label">Formação</div>
-          <div class="edu-item">
-            <div class="edu-deg">Bacharelado em Comunicação</div>
-            <div class="edu-school">FGV Comunicação</div>
-            <div class="edu-date">2025 — 2028 (previsto) · em curso</div>
-          </div>
-          <div class="edu-item">
-            <div class="edu-deg">Ciência de Dados (formação complementar)</div>
-            <div class="edu-school">FGV EMAp</div>
-            <div class="edu-date">2024 — 2025</div>
-          </div>
-          <div class="edu-item">
-            <div class="edu-deg">Ensino Médio</div>
-            <div class="edu-school">Colégio Pedro II · Campus Tijuca</div>
-            <div class="edu-date">concluído em 2022</div>
-          </div>
-        </section>
-
-        <section>
-          <div class="sec-label">Competências</div>
-          <div class="skill-group">
-            <div class="skill-group-name">Comunicação &amp; Narrativa</div>
-            <div class="chips">
-              <span class="chip">Storytelling de dados</span>
-              <span class="chip">Análise de enquadramento</span>
-              <span class="chip">Redação técnica</span>
-              <span class="chip">Monitoramento de mídia</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-name">Dados & Programação</div>
-            <div class="chips">
-              <span class="chip">Python · OO</span>
-              <span class="chip">Pandas</span>
-              <span class="chip">SQL</span>
-              <span class="chip">APIs &amp; scraping</span>
-              <span class="chip">Git</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-name">Machine Learning & IA</div>
-            <div class="chips">
-              <span class="chip">BERTopic</span>
-              <span class="chip">NLP</span>
-              <span class="chip">Embeddings</span>
-              <span class="chip">Clusterização</span>
-              <span class="chip">LLMs · GenAI</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <div class="skill-group-name">Análise & Entrega</div>
-            <div class="chips">
-              <span class="chip">Power BI</span>
-              <span class="chip">Excel</span>
-              <span class="chip">Web · HTML/JS</span>
-              <span class="chip">Dataviz</span>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <div class="sec-label">Idiomas</div>
-          <div class="lang-row"><span>Português</span><span class="lvl">nativo</span></div>
-          <div class="lang-row"><span>Inglês</span><span class="lvl">técnico · avançado</span></div>
+          <h2 style="font-family: var(--font-body); font-size: 8.4pt; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 10px; padding-bottom: 5px; border-bottom: 1px solid color-mix(in srgb, var(--ink) 20%, transparent)">Idiomas</h2>
+          <div style="font-size: 9.5pt; line-height: 1.45">Português nativo · Inglês fluente, diploma do Canadian College (Vancouver)</div>
         </section>
       </div>
     </div>
 
-    <div class="cv-foot">
-      <span>Erik Nonato Rolin · Currículo</span>
-      <span>Atualizado em 2026 · Rio de Janeiro</span>
-    </div>
-  </div>
+    <footer style="margin-top: auto; padding-top: 11px; border-top: 1px solid color-mix(in srgb, var(--ink) 20%, transparent); display: flex; justify-content: space-between; gap: 20px; font-size: 8.2pt; color: color-mix(in srgb, var(--ink) 62%, transparent)">
+      <span>Estudos de caso, documentação e código no portfólio: <span style="font-weight: 700; color: var(--ink)">eriknrolin-portfolio.vercel.app</span></span>
+      <span>Atualizado em agosto de 2026</span>
+    </footer>
+
+  </section>
+
 </body>
 </html>
