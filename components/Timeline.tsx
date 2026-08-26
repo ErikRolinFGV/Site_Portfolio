@@ -49,8 +49,8 @@ export function Timeline() {
                   <span style={{ fontSize: '13px', fontWeight: '700', letterSpacing: '0.04em', color: 'var(--ink)' }}>2025.1</span>
                   <span style={{ fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase', borderRadius: '999px', padding: '4px 10px', background: 'color-mix(in srgb, var(--ink) 8%, transparent)', color: 'color-mix(in srgb, var(--ink) 62%, transparent)' }}>virada</span>
                 </div>
-                <div style={{ fontFamily: 'var(--font-heading)', fontWeight: '700', fontSize: '18px', letterSpacing: '-0.02em', marginTop: '6px' }}>Transferência para a FGV Comunicação</div>
-                <p style={{ fontSize: '15px', lineHeight: '1.6', margin: '6px 0 0', color: 'color-mix(in srgb, var(--ink) 78%, transparent)' }}>Comunicação somada à base técnica; a EMAp vira formação complementar. Começa o PIBIC "O Voto, A Bala e a Floresta".</p>
+                <div style={{ fontFamily: 'var(--font-heading)', fontWeight: '700', fontSize: '18px', letterSpacing: '-0.02em', marginTop: '6px' }}>Transferência para a FGV Comunicação · Comunicação Digital</div>
+                <p style={{ fontSize: '15px', lineHeight: '1.6', margin: '6px 0 0', color: 'color-mix(in srgb, var(--ink) 78%, transparent)' }}>Comunicação Digital somada à base técnica; a EMAp vira formação complementar. Começa o PIBIC "O Voto, A Bala e a Floresta".</p>
               </li>
               <li style={{ position: 'relative', paddingLeft: '34px' }}>
                 <span style={{ position: 'absolute', left: '0', top: '7px', width: '13px', height: '13px', borderRadius: '999px', background: 'var(--ink)', boxShadow: '0 0 0 4px var(--color-surface)' }}></span>
@@ -85,8 +85,8 @@ export function Timeline() {
                   <span style={{ fontSize: '13px', fontWeight: '700', letterSpacing: '0.04em', color: 'var(--ink)' }}>2028</span>
                   <span style={{ fontSize: '10px', letterSpacing: '0.1em', textTransform: 'uppercase', borderRadius: '999px', padding: '4px 10px', background: 'color-mix(in srgb, var(--ink) 8%, transparent)', color: 'color-mix(in srgb, var(--ink) 62%, transparent)' }}>previsto</span>
                 </div>
-                <div style={{ fontFamily: 'var(--font-heading)', fontWeight: '700', fontSize: '18px', letterSpacing: '-0.02em', marginTop: '6px' }}>Graduação · FGV Comunicação</div>
-                <p style={{ fontSize: '15px', lineHeight: '1.6', margin: '6px 0 0', color: 'color-mix(in srgb, var(--ink) 78%, transparent)' }}>Conclusão do curso de Comunicação com formação complementar em Ciência de Dados.</p>
+                <div style={{ fontFamily: 'var(--font-heading)', fontWeight: '700', fontSize: '18px', letterSpacing: '-0.02em', marginTop: '6px' }}>Graduação em Comunicação Digital · FGV Comunicação</div>
+                <p style={{ fontSize: '15px', lineHeight: '1.6', margin: '6px 0 0', color: 'color-mix(in srgb, var(--ink) 78%, transparent)' }}>Conclusão do curso de Comunicação Digital com formação complementar em Ciência de Dados.</p>
               </li>
             </ol>
           </div>

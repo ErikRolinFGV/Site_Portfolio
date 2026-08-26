@@ -13,7 +13,7 @@ export function About() {
               <div>
                 <div style={{ fontSize: '12px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--color-accent-2-800)' }}>Sobre</div>
                 <h2 style={{ fontSize: '46px', margin: '18px 0 0', maxWidth: '20ch' }}>Comunicação como disciplina técnica</h2>
-                <p style={{ fontSize: '18px', lineHeight: '1.65', margin: '22px 0 0', maxWidth: '52ch', color: 'var(--color-accent-2-900)' }}>Estudante de Comunicação na FGV Comunicação, com formação prevista para 2028 e formação complementar em Ciência de Dados na FGV EMAp. Sou Diretor de Desenvolvimento da liga acadêmica FGV Quest, onde lidero o time técnico em parceria com a Prefeitura do Rio, e bolsista de Iniciação Científica em análise de mídia. Para a Nexus (FSB Holding), construí uma plataforma de inteligência sobre executivos brasileiros. Tenho interesse em comunicação corporativa, reputação de marca, ciência de dados e IA aplicada.</p>
+                <p style={{ fontSize: '18px', lineHeight: '1.65', margin: '22px 0 0', maxWidth: '52ch', color: 'var(--color-accent-2-900)' }}>Graduando em Comunicação Digital na FGV Comunicação, com formação prevista para 2028 e formação complementar em Ciência de Dados na FGV EMAp. Sou Diretor de Desenvolvimento da liga acadêmica FGV Quest, onde lidero o time técnico em parceria com a Prefeitura do Rio, e bolsista de Iniciação Científica em análise de mídia. Para a Nexus (FSB Holding), construí uma plataforma de inteligência sobre executivos brasileiros. Tenho interesse em comunicação corporativa, reputação de marca, ciência de dados e IA aplicada.</p>
               </div>
             </div>
           </div>

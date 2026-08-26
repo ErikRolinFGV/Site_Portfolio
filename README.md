@@ -114,6 +114,10 @@ real. Se um texto do site contradisser uma delas, o texto está errado.
 - **Nenhuma nota de jogo do JogoJusto.** Nenhuma foi validada.
 - **Nunca a sigla "ISJ".** A marca é JogoJusto.
 - **Nunca "FGV ECMI".** A escola é **FGV Comunicação**.
+- **A escola e o curso têm nomes distintos.** A escola é **FGV Comunicação**; a graduação é
+  **Comunicação Digital**. Nunca escreva "graduação em Comunicação" nem "Comunicação na FGV
+  Comunicação". Ao falar do curso, é Comunicação Digital; ao falar da instituição, é FGV
+  Comunicação.
 - A documentação de arquitetura do Deeper **não é link público**: está sob custódia do compliance da
   FSB Holding.
 

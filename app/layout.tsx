@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Erik Rolin · Comunicar é transformar dado em decisão",
   description:
-    "Portfólio de Erik Rolin — estudante de Comunicação na FGV Comunicação, com formação complementar em Ciência de Dados na FGV EMAp. Construo as ferramentas que coletam e analisam os dados, e escrevo a leitura que sai deles.",
+    "Portfólio de Erik Rolin — graduando em Comunicação Digital na FGV Comunicação, com formação complementar em Ciência de Dados na FGV EMAp. Construo as ferramentas que coletam e analisam os dados, e escrevo a leitura que sai deles.",
 };
 
 export default function RootLayout({

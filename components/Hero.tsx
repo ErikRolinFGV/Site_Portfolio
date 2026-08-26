@@ -8,7 +8,7 @@ export function Hero() {
           <div>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '12px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--color-bg)', background: 'var(--ink)', borderRadius: '999px', padding: '7px 16px' }}>Aberto a estágio · Rio de Janeiro</div>
             <h1 className="h-display" style={{ fontSize: '76px', lineHeight: '1.02', margin: '26px 0 0', maxWidth: '16ch' }}>Comunicar é transformar dado em decisão.</h1>
-            <p style={{ fontSize: '20px', lineHeight: '1.6', maxWidth: '46ch', margin: '26px 0 0', color: 'var(--ink)' }}>Erik Rolin. Comunicação na FGV Comunicação, com formação complementar em Ciência de Dados na FGV EMAp. Construo as ferramentas que coletam e analisam os dados — e escrevo a leitura que sai deles.</p>
+            <p style={{ fontSize: '20px', lineHeight: '1.6', maxWidth: '46ch', margin: '26px 0 0', color: 'var(--ink)' }}>Erik Rolin. Graduando em Comunicação Digital na FGV Comunicação, com formação complementar em Ciência de Dados na FGV EMAp. Construo as ferramentas que coletam e analisam os dados — e escrevo a leitura que sai deles.</p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '34px' }}>
               <a className="btn btn-primary" href="/cv.html" target="_blank" rel="noreferrer" style={{ borderRadius: '999px', padding: '14px 26px', fontSize: '16px' }}>Baixar currículo ↓</a>
               <a className="btn btn-secondary" href="mailto:eriknrolin@gmail.com" style={{ borderRadius: '999px', padding: '14px 26px', fontSize: '16px' }}>eriknrolin@gmail.com</a>
